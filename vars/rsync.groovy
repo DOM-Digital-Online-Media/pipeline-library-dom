@@ -8,7 +8,7 @@ def call(def args) {
     rsyncCredentials = credentials('buehne3-jenkins-rsync-password')
     rsyncCredentials.password
     withEnv(["JAVA_HOME=${javaHome}", "PATH+MAVEN=${mvnHome}/bin:${script.env.JAVA_HOME}/bin"]) {
-        sh "${mvnHome}/bin ${args} --batch-mode -V -U -e -Dsurefire.useFile=false"
+        sh 'printenv'
     }
     sh "rsync --exclude '*/.git' -rt ${source}/* jenkins@localhost::${module}/${documentRoot}"
 }
