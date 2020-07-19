@@ -1,5 +1,7 @@
 def call(def args) {
 
+    sh 'printenv'
+
     documentRoot = script.env.DOCUMENT_ROOT_ABSOLUT.replace(modulePath, '')
     source       = script.env.WORKSPACE.replace(' ', '\\ ')
 
