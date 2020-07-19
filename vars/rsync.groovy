@@ -2,7 +2,7 @@ def call(
     String module  = 'webroot',
     String modulePath = '/var/www/htdocs' ){
 
-    documentRoot = script.env.DOCUMENT_ROOT_ABSOLUT.replace(modulePath'/', '')
+    documentRoot = script.env.DOCUMENT_ROOT_ABSOLUT.replace(modulePath, '')
     source       = script.env.WORKSPACE.replace(' ', "\\ ")
 
     // Any valid steps can be called from this code, just like in other
