@@ -1,11 +1,11 @@
 #!/usr/bin/env groovy
-package com.cleverbuilder
+package com.domdom
 
 class GlobalVars {
    static String foo = "bar"
 
    // refer to this in a pipeline using:
    //
-   // import com.cleverbuilder.GlobalVars
+   // import com.domdom.GlobalVars
    // println GlobalVars.foo
 }
