@@ -1,4 +1,4 @@
-String def call(
+def call(
     String module  = 'webroot',
     String modulePath = '/var/www/htdocs' ){
 
